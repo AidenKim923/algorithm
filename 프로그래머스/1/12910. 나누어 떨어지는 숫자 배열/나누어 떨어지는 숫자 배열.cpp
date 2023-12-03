@@ -8,6 +8,8 @@ vector<int> solution(vector<int> arr, int divisor)
 {
 	vector<int> answer;
 
+	sort(arr.begin(), arr.end());
+
     for (auto i : arr) {
 		if (0 == (i % divisor)) 
 		{
@@ -15,10 +17,5 @@ vector<int> solution(vector<int> arr, int divisor)
 			answer.push_back(i);
 		}
 	}
-	if (answer.empty())
-	{
-		answer.push_back(-1);
-	}
-	sort(answer.begin(), answer.end());
-	return answer;
+	return answer.empty() ? vector<int>(1, -1) : answer;
 }
