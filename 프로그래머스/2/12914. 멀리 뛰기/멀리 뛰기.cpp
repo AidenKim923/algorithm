@@ -4,7 +4,7 @@
 using namespace std;
 
 long long solution(int n) {
-    long long answer[2001];
+    long long answer[2000];
     answer[0] = 1;
     answer[1] = 1;
     for (int i = 2; n >= i; ++i)
